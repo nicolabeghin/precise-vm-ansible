@@ -2,14 +2,10 @@
 - name: Install Python MySQLdb
   apt: name=python-mysqldb state=latest
 
-- name: Create the Drupal database
-  sudo_user: root
-  mysql_db: db={{ db_name }} state=present
-
-- name: Create the Drupal user
+- name: users | update root password for all hosts
   mysql_user: >
-    name={{ db_user }}
-    password={{ db_password }}
-    priv={{ db_name }}.*:ALL
+    name=root
     host=localhost
-  sudo_user: root
+    password={{ db_password }}
+    priv=*.*:ALL,GRANT
+

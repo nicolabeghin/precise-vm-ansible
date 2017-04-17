@@ -12,6 +12,5 @@
     - php
     - xdebug
     - mysql
-    - phpmyadmin
     - composer
     - drush

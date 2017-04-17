@@ -1,27 +1,22 @@
 ---
 
-vagrant_hostname: precise64-ansible.dev
-vagrant_ip: 192.168.88.30
+vagrant_hostname: lamp.local
+vagrant_ip: 10.10.10.10
 # Virtual machine memory setup.
 vm_ram: "2048"
 
-locale: en_US.UTF-8
-language: 'en_US:en'
-timezone: Etc/UTC
+locale: it_IT.UTF-8
+language: 'it_IT:it'
+timezone: Europe/Rome
 
 # Your local path for all sites.
-local_sites_path: "~/VM/myproject/sites"
+local_sites_path: "~/Sites"
 # Your VM local path for all sites.
-vm_sites_path: "/var/www/sites"
+vm_sites_path: "/var/www"
 
 # Your site index path.
-site_root_path: "/var/www/sites/mysite/www"
-
-# Database details.
-mysql_root_password: root
-db_name: mysite
-db_user: mysite
-db_password: mysite
+site_root_path: "/var/www"
+db_password: ""
 
 # PHP settings.
 php_max_execution_time: "128"
